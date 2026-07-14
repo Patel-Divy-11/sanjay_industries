@@ -1,0 +1,129 @@
+/* ─── Google Fonts (loaded at runtime — works in all environments) ─── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap');
+
+/* ─── CSS Font Variables ─────────────────────────────────────────── */
+:root {
+  --font-poppins: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-manrope: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Reset ──────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-inter;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ─── Utility Classes ────────────────────────────────────────────────────── */
+@layer utilities {
+  .container-main {
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-10 md:py-14;
+  }
+
+  /* Text gradient for gold accent text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #EAB308 0%, #CA8A04 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Focus ring */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2;
+  }
+}
+
+/* ─── Component Styles ───────────────────────────────────────────────────── */
+@layer components {
+  /* Navbar scroll state */
+  .navbar-scrolled {
+    @apply shadow-nav;
+  }
+
+  /* Product color swatch */
+  .color-swatch {
+    height: 6px;
+    border-radius: 0 0 16px 16px;
+    transition: height 0.3s ease;
+  }
+
+  .product-card:hover .color-swatch {
+    height: 10px;
+  }
+
+  /* Animated counter */
+  .stat-number {
+    @apply font-manrope font-bold;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Placeholder image for factory/office shots */
+  .image-placeholder {
+    @apply bg-navy-800 flex items-center justify-center relative overflow-hidden;
+  }
+
+  .image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1F3A;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffd000;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0B1F3A;
+}
