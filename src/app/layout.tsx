@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingContact from '@/components/ui/FloatingContact'
+import { Analytics } from '@vercel/analytics/next'
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
 // NOTE: Google Fonts are loaded via <link> in globals.css for flexibility.
@@ -72,6 +73,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingContact />
+        <Analytics />
       </body>
     </html>
   )
