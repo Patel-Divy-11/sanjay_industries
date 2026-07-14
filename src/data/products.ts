@@ -12,6 +12,14 @@ export const productCategories: ProductCategory[] = [
       'High-performance direct yellow dyes offering bright, uniform shades on cellulosic fibres with excellent wash fastness.',
     products: [
       {
+        id: 'dy-6',
+        name: 'Direct Yellow 6',
+        shade: 'Bright Lemon Yellow',
+        applications: ['Cotton', 'Viscose', 'Paper'],
+        packaging: '25 kg bags',
+        availability: 'In Stock',
+      },
+      {
         id: 'dy-12',
         name: 'Direct Yellow 12',
         shade: 'Bright Lemon Yellow',
