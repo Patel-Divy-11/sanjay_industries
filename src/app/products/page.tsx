@@ -103,9 +103,6 @@ export default function ProductsPage() {
                       {/* Header */}
                       <div className="flex items-start justify-between gap-2 mb-2">
                         <h3 className="font-poppins font-semibold text-navy text-sm leading-snug">{product.name}</h3>
-                        <Badge variant={product.availability === 'In Stock' ? 'green' : 'gray'}>
-                          {product.availability}
-                        </Badge>
                       </div>
 
                       {product.shade && (
