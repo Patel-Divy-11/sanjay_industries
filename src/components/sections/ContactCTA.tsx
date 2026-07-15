@@ -46,7 +46,7 @@ export default function ContactCTA() {
             {contactPersons.map((person) => (
               <div key={person.phoneRaw} className="flex items-center gap-2 bg-white/8 rounded-2xl px-5 py-3 border border-white/10">
                 <div>
-                  <p className="text-xs text-slate-400 font-inter">{person.name} · {person.role}</p>
+                  <p className="text-xs text-slate-400 font-inter">{person.name}</p>
                   <a
                     href={`tel:${person.phoneRaw}`}
                     className="text-white font-poppins font-semibold text-sm hover:text-gold-400 transition-colors"
