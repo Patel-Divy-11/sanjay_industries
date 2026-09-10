@@ -20,7 +20,7 @@ const timeline = [
   { year: '2000', event: 'Entered export markets — first shipments to Bangladesh' },
   { year: '2008', event: 'Achieved ISO 9001 quality management certification' },
   { year: '2015', event: 'Expanded to Nepal and other international markets' },
-  { year: '2024', event: '35+ years strong — 100+ products, serving global buyers' },
+  { year: '2024', event: '35+ years strong — 20+ products, serving global buyers' },
 ]
 
 export default function AboutPage() {
@@ -71,7 +71,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { value: '1990', label: 'Year Established', sub: '35+ years in business' },
-                { value: '100+', label: 'Products', sub: 'Direct & Acid dye range' },
+                { value: '20+', label: 'Products', sub: 'Direct & Acid dye range' },
                 { value: '4+', label: 'Export Countries', sub: 'India, BD, Nepal & more' },
                 { value: 'ISO', label: '9001:2015', sub: 'Quality certified' },
               ].map((s) => (
