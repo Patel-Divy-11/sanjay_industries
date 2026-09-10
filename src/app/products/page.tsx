@@ -31,7 +31,7 @@ export default function ProductsPage() {
                 Direct Dyes &amp; Acid Dyes
               </h1>
               <p className="text-slate-300 max-w-lg">
-                100+ products across 6 categories for textile, paper, leather and industrial applications.
+                20+ products across 6 categories for textile, paper, leather and industrial applications.
               </p>
             </div>
             {/* Header CTAs */}
